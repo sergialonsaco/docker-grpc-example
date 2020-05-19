@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  client:
+    build: ./dir
+    image:
+    networks:
+        testnet
+    command: "python3 app/client.py"
+  server:
+    build: ./dir
+    image:
+    networks:
+        testnet
+    command: "python3 app/server.py"
+
+networks:
+    testnet:

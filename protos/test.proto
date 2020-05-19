@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package lmjwtest;
+
+// service, encode a plain text 
+service EncodeService {
+    // request a service of encode
+    rpc GetEncode(plaintext) returns (encodetext) {}
+}
+
+
+message plaintext {
+    string pttransactionID = 1;
+    string ptproperties = 2;
+    string ptsenderID = 3;
+}
+
+message encodetext {
+    string enctransactionID = 1;
+    string encproperties = 2;
+    string encsenderID = 3;
+}
